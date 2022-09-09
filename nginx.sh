@@ -53,14 +53,14 @@ install(){
 		mkdir /etc/nginx
 		mkdir /etc/nginx/conf.d
 		mkdir /etc/nginx/tls
-		wget -N -P -O /etc/nginx/nginx https://github.com/HynoR/nginx-mini/releases/download/v0.01/nginx-centos
+		wget -N -P /etc/nginx -O nginx https://github.com/HynoR/nginx-mini/releases/download/v0.01/nginx-centos
 		wget -N -P /etc/nginx https://file.reimucloud.com/bin/tengine/CentOS/mime.types
         wget -N -P /etc/nginx/conf.d https://file.reimucloud.com/bin/nginx_proxy/ws
         wget -N -P /etc/nginx/tls https://file.reimucloud.com/bin/nginx_proxy/tls-cli
         wget -N -P /etc/nginx/tls https://file.reimucloud.com/bin/nginx_proxy/tls-server
         wget -N -P /etc/nginx/conf.d https://file.reimucloud.com/bin/tengine/readme
 		mkdir /etc/nginx/modules
-		wget -N -P -O  /etc/nginx/modules/ngx_stream_module.so https://github.com/HynoR/nginx-mini/releases/download/v0.01/ngx_stream_module_c.so
+		wget -N -P   /etc/nginx/modules -O ngx_stream_module.so https://github.com/HynoR/nginx-mini/releases/download/v0.01/ngx_stream_module_c.so
         systemctl start nginx
         systemctl enable nginx
         echo -e "${Green}done!${Font}"
@@ -75,14 +75,14 @@ install(){
 		mkdir /etc/nginx
 		mkdir /etc/nginx/conf.d
 		mkdir /etc/nginx/tls
-		wget -N -P -O /etc/nginx/nginx https://file.reimucloud.com/bin/tengine/nginx.conf
+		wget -N -P  /etc/nginx -O nginx https://file.reimucloud.com/bin/tengine/nginx.conf
 		wget -N -P /etc/nginx https://file.reimucloud.com/bin/tengine/CentOS/mime.types
         wget -N -P /etc/nginx/conf.d https://file.reimucloud.com/bin/nginx_proxy/ws
         wget -N -P /etc/nginx/tls https://file.reimucloud.com/bin/nginx_proxy/tls-cli
         wget -N -P /etc/nginx/tls https://file.reimucloud.com/bin/nginx_proxy/tls-server
         wget -N -P /etc/nginx/conf.d https://file.reimucloud.com/bin/tengine/readme
 		mkdir /etc/nginx/modules
-		wget -N -P -O  /etc/nginx/modules/ngx_stream_module.so https://github.com/HynoR/nginx-mini/releases/download/v0.01/ngx_stream_module_d.so
+		wget -N -P   /etc/nginx/modules -O ngx_stream_module.so https://github.com/HynoR/nginx-mini/releases/download/v0.01/ngx_stream_module_d.so
         systemctl start nginx
         systemctl enable nginx
         echo -e "${Green}done!${Font}"
